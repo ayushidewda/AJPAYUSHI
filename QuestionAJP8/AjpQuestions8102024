@@ -1,0 +1,153 @@
+//Q1. Wap to check whether an year is leap or not?
+	(Year%4==0  && year%100!=0)  || year%400==0  leap year
+import java.util.*;
+class leap{
+    public static void main(String args[]){
+     Scanner sc = new Scanner(System.in);
+      System.out.println("enter year");
+     int year= sc.nextInt();
+     leapYear = (year%4==0);
+     leapYear = leapYear && (year%100 != 0 || year%400 == 0)?           
+          System.out.println(year+ "year is leap year");:
+         System.out.println(year+ "year is not leap year");
+
+}
+}
+}
+
+
+
+//Wap to check the experience of an employee, if exp is greater than 20 years then calculate bonus=20% salary, else calculate bonus = 10% of salary.
+import java.util.*;
+class Bonus {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       
+        System.out.print("Enter employee experience: ");
+        int exp = sc.nextInt();
+        
+        System.out.print("Enter employee salary: ");
+        int salary = sc.nextInt();
+       
+        double bonus = (exp > 20) ? 0.20 * salary : 0.10 * salary;
+       
+        System.out.println("The bonus is: " + bonus);
+    }
+}
+
+
+
+
+
+//Wap to check if a person is eligible to vote or not.
+ int age = 18;
+System.out.println( (age>=18)?"eligible to vote":"not eligile");
+ 
+
+
+//Wap to check whether  a character is in lower case or upper case.
+import java.util.*;
+class checkLetter{
+     public static void main(String[] args){
+       Scanner sc = new Scanner(System.in); 
+     System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+      String result =(Character.isUpperCase(ch))?"uppercase":"lowercase";
+     System.out.println(result);
+}
+}
+
+//5. Wap to check whether a number is negative or positive or zero.
+import java.util.*;
+class checkNumber{
+     public static void main(String[] args){
+       Scanner sc = new Scanner(System.in); 
+     System.out.print("Enter a number: ");
+     int number = sc.nextInt();
+ System.out.println((number > 0) ? "Positive" :
+                        (number < 0) ? "Negative" : "Zero");
+}
+}
+
+
+
+
+// Wap to print pass or fail according to marks.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your marks: ");
+        int marks = sc.nextInt();  
+     System.out.println((marks >= 33) ? "Pass" : "Fail";);
+  }
+}
+
+
+//Wap to check whether a character is vowel or not.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter char: ");
+         char ch = sc.next().toLowerCase().charAt(0);
+         System.out.println(ch=='a'|| ch=='e' || ch =='i' || ch =='o' || ch=='u')?"vowel" : "not a vowel";);
+}
+}  
+
+//Wap to check whether a number is even or odd.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter num: ");
+         int num =sc.nextInt();
+       System.out.println((number%2==0) ?"even" : "odd";);
+}
+}
+
+
+Q9. 1. Check whether the character is alphabet or not
+// 2. If character is alphabet then check if it is in lower case or upper case
+//3. If it is in upper case then convert it into lower case
+//4. Check if it is vowel or not
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+String isAlpha = (Character.isLetter(ch))?(ch + "is an alphabet"):(ch+ "is not a alphabet);")
+System.out.println(isAplha);
+
+
+if(Character.isLetter(ch)){
+     String typeCase = (Character.isUpperCase(ch))?"Uppercase":"lowercase";
+     System.out.println(typecase);
+   
+
+ char lowerCaseCh = (Character.isUpperCase(ch)) ? Character.toLowerCase(ch) : ch;
+            System.out.println( lowerCaseCh);
+    String isVowel = (lowerCaseCh == 'a' || lowerCaseCh == 'e' || lowerCaseCh == 'i' || lowerCaseCh == 'o' || lowerCaseCh == 'u') ? 
+                (lowerCaseCh + " is a vowel.") : (lowerCaseCh + " is not a vowel.");
+            System.out.println(isVowel);
+  
+
+ 
+
+
+
+
+        
+
+        
+
+                     
+
+
+
