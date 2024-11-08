@@ -1,1 +1,186 @@
+//question 1
+import java.util.Scanner;
+
+public class BracketPosition
+{
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter a string : ");
+		String str=sc.nextLine();
+		
+		System.out.println("Enter opening bracket position : ");
+		int pos=sc.nextInt();
+		
+		int opencount=0;
+		boolean status=false;
+		
+		if(pos>=0 && pos<str.length())
+		{
+			for(int i=pos+1;i<str.length();i++) // i=20  i<22
+			{
+				char ch=str.charAt(i);
+				if(ch == '(')  // false
+					opencount++;
+				else if(ch==')') // false
+				{
+					if(opencount>0)
+						opencount--;
+					else
+					{
+						System.out.println("the last position of closing parenthesis is "+i);
+						status = true;
+						break;
+					}
+				}
+			}
+			if(!status)
+				System.out.println("Closing parenthesis not found!!!");
+		}
+		else
+			System.out.println("Given index position is not valid!!");
+	}
+}
+
+//quesrion 2nd
+import java.util.*;
+class leap{
+    public static void main(String args[]){
+     Scanner sc = new Scanner(System.in);
+      System.out.println("enter year");
+     int year= sc.nextInt();
+     leapYear = (year%4==0);
+     leapYear = leapYear && (year%100 != 0 || year%400 == 0)?           
+          System.out.println(year+ "year is leap year");:
+         System.out.println(year+ "year is not leap year");
+
+}
+}
+//question3rd
+public class inheritanceQuestion {
+    class User {
+        private int id;
+        private String name;
+
+
+        public User(int id, String name) {
+            this.id = id;
+            this.name = name;
+
+
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public String getName() {
+            return name;
+
+        }
+
+        class Employee extends User {
+            private double salary;
+
+            public Employee(int id, String name, double salary) {
+                super(id, name);
+                this.salary = salary;
+            }
+
+            public double calculateSalary() {
+                return salary * 12;
+            }
+        }
+
+        public class main {
+            public static void main(String[] args){
+                Employee emp = new Employee("101" ,"John Doe", 5000.0);
+
+                // Calculate and display the annual salary
+                System.out.println("Employee ID: " + emp.getId());
+                System.out.println("Employee Name: " + emp.getName());
+                System.out.println("Monthly Salary: " + emp.getSalary());
+                System.out.println("Annual Salary: " + emp.calculateAnnualSalary());
+            }
+        }
+    }
+}
+
+
+//quesion4
+public class SubArrayMax {
+    public static void main(String[] args) {
+        int arr[]= {2, 4 ,5, 3, 6, 7, 9, 4, 5, 6};
+        int[] subArray = new int[5];
+        System.arraycopy(arr, 2, subArray, 0, 5);
+        System.out.println(subArray);
+        for(int x:subArray){
+            System.out.print(x+"");
+        }
+        System.out.println();
+        int high = Integer.MIN_VALUE;
+        int secondHigh= Integer.MAX_VALUE;
+        for(int x:arr){
+            if(x>high){
+               secondHigh = high;
+               high = x;
+
+            }else if(x>secondHigh && x!=high){
+                secondHigh = x;
+            }
+        }
+        System.out.println("2md highestis "+secondHigh);
+
+
+
+
+
+    }
+
+}
+//question5
+import java.util.Scanner;
+
+public class BracketPosition
+{
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter a string : ");
+		String str=sc.nextLine();
+		
+		System.out.println("Enter opening bracket position : ");
+		int pos=sc.nextInt();
+		
+		int opencount=0;
+		boolean status=false;
+		
+		if(pos>=0 && pos<str.length())
+		{
+			for(int i=pos+1;i<str.length();i++) // i=20  i<22
+			{
+				char ch=str.charAt(i);
+				if(ch == '(')  // false
+					opencount++;
+				else if(ch==')') // false
+				{
+					if(opencount>0)
+						opencount--;
+					else
+					{
+						System.out.println("the last position of closing parenthesis is "+i);
+						status = true;
+						break;
+					}
+				}
+			}
+			if(!status)
+				System.out.println("Closing parenthesis not found!!!");
+		}
+		else
+			System.out.println("Given index position is not valid!!");
+	}
+}
 
